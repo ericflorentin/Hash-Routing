@@ -80,9 +80,11 @@ a:visited {
   font-size: 14px;
   padding: 3px 5px;
   cursor: pointer;
+  transition: 0.3s;
 }
 .btn:hover,
 .btn:active {
+  transform: translateY(-3px);
   background: var(--button-background-hover);
 }
 
@@ -101,9 +103,11 @@ a:visited {
   font-size: 20px;
   padding: 5px 10px;
   cursor: pointer;
+  transition: 0.3s;
 }
 .btn-yes:hover,
 .btn-yes:active {
+  transform: translateY(-3px);
   background: var(--button-background-hover);
 }
 
@@ -122,9 +126,11 @@ a:visited {
   font-size: 20px;
   padding: 5px 10px;
   cursor: pointer;
+  transition: 0.3s;
 }
 .btn-no:hover,
 .btn-no:active {
+  transform: translateY(-3px);
   background: var(--button-background-hover);
 }
 
@@ -168,23 +174,35 @@ a:visited {
   }
 }
 
-.templatebox {
-  display: flex;
-  align-items: center;
-}
-
 .templatetext {
-  resize: none;
-  overflow: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
   padding: 5px;
   width: 100%;
   border: 1px solid black;
-  background-color: rgba(110, 110, 110, 0.1);
+  background-color: rgba(110, 110, 110, 0.2);
   border-radius: 5px;
-  cursor: pointer;
+  text-wrap: balance;
+  transition: 0.3s;
+  position: relative;
+}
+.templatetext:hover {
+  background-color: rgba(110, 110, 110, 0.4);
+}
+.tooltip {
+  position: absolute;
+  right: -65px;
+  padding: 3px;
+  color: white;
+  background-color: black;
+  border-radius: 5px;
 }
 
-svg {
-  height: 20px;
+img {
+  cursor: pointer;
+  flex-shrink: 0;
   width: 20px;
+  height: 20px;
 }
