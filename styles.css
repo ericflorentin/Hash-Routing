@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Amazon Ember", sans-serif;
+}
+
+body {
+  /* background: linear-gradient(rgb(110, 110, 110), rgb(51, 51, 51)); */
+  background: linear-gradient(rgb(70, 70, 70), rgb(20, 20, 20));
+  min-height: 100vh;
+}
+
+.container {
+  width: 600px;
+  margin: 0px auto;
+  padding-top: 30px;
+}
+
+.contentbox {
+  position: relative;
+  background-color: rgb(240, 240, 240);
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.contentbox::before {
+  content: "";
+  background: linear-gradient(180deg, rgb(199, 98, 30), rgb(150, 56, 19));
+  box-shadow: inset 0 5px 9px rgba(255, 255, 255, 0.3),
+    0 3px 5px rgba(43, 45, 49, 0.9);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -10px;
+  border-radius: 12px;
+  z-index: -1;
+}
+
+.animatebox {
+  animation: transitionIn 0.5s;
+}
+
+h2 {
+  background: linear-gradient(180deg, rgb(61, 61, 61), rgb(31, 31, 31));
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.warning {
+  background-color: orange;
+  margin: 20px 0;
+  padding: 5px;
+  border-radius: 5px;
+}
+.closing {
+  background-color: rgba(207, 24, 0, 0.9);
+  margin: 20px 0;
+  padding: 5px;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+.questionbox {
+  background-color: lightgrey;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 26px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.questionbox > p {
+  margin-bottom: 15px;
+}
+
+.buttonbox {
+  display: flex;
+  gap: 30px;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+.btn {
+  --button-color: white;
+  --button-backgound: #585858;
+  --button-background-hover: #5f5f5f;
+
+  background: var(--button-backgound);
+  color: var(--button-color);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-family: "Amazon Ember", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 3px 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.btn:hover,
+.btn:active {
+  transform: translateY(-2px);
+  /* background: var(--button-background-hover); */
+  box-shadow: 0px 2px 0px black;
+}
+
+.btn-yes {
+  --button-color: #333;
+  --button-backgound: #1bc540;
+  --button-background-hover: #199715;
+
+  background: var(--button-backgound);
+  color: var(--button-color);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-family: "Amazon Ember", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.btn-yes:hover,
+.btn-yes:active {
+  transform: translateY(-3px);
+  /* background: var(--button-background-hover); */
+  box-shadow: 0px 2px 0px black;
+}
+
+.btn-no {
+  --button-color: #333;
+  --button-backgound: #e9352f;
+  --button-background-hover: #a51010;
+
+  background: var(--button-backgound);
+  color: var(--button-color);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-family: "Amazon Ember", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.btn-no:hover,
+.btn-no:active {
+  transform: translateY(-3px);
+  /* background: var(--button-background-hover); */
+  box-shadow: 0px 2px 0px black;
+}
+
+.progressbox {
+  background: linear-gradient(180deg, rgb(61, 61, 61), rgb(31, 31, 31));
+  color: whitesmoke;
+  padding: 10px;
+  border-radius: 5px;
+}
+.progressbox .btn {
+  margin-top: 10px;
+}
+
+.subcontentbox {
+  margin: 10px 0;
+  padding: 5px;
+  background-color: rgba(148, 148, 148, 0.8);
+  border-radius: 5px;
+}
+.subcontentbox h3 {
+  padding-bottom: 5px;
+  padding-left: 10px;
+}
+
+.description {
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+.action {
+  background-color: rgba(255, 166, 0, 0.849);
+}
+
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.templatetext {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  padding: 5px;
+  width: 100%;
+  border: 1px solid black;
+  background-color: rgba(110, 110, 110, 0.2);
+  border-radius: 5px;
+  text-wrap: balance;
+  transition: 0.3s;
+  position: relative;
+}
+.templatetext:hover {
+  background-color: rgba(110, 110, 110, 0.4);
+}
+.tooltip {
+  position: absolute;
+  right: -65px;
+  padding: 3px;
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+}
+
+img {
+  cursor: pointer;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+}
